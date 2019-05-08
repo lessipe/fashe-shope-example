@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+  <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+  <header class="app-header navbar">
+  <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    관리자
+  </a>
+  <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="nav navbar-nav ml-auto">
+  </ul>
+</header>
+  <div class="app-body">
+    <div class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="nav-icon icon-speedometer"></i> 대시보드
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./user.html">
+              <i class="nav-icon icon-user"></i> 회원관리
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./product.html">
+              <i class="nav-icon icon-handbag"></i> 상품관리
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./order.html">
+              <i class="nav-icon icon-basket"></i> 주문관리
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./qna.html">
+              <i class="nav-icon icon-speech"></i> 문의관리
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+    </div>
+
+    <main class="main">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">주문관리</li>
+      </ol>
+      <div class="container-fluid">
+        <div class="animated fadeIn">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-search"></i>
+                  검색
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="title">상품명</label>
+                        <input type="text" class="form-control" id="title">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="from">주문일</label>
+                        <div class="form-inline">
+                          <input type="date" class="form-control" id="from" placeholder="date"> &nbsp;~&nbsp;
+                          <input type="date" class="form-control" id="to" placeholder="date">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-sm">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-align-justify"></i>
+                  주문 목록
+                </div>
+                <div class="card-body">
+                  <table class="table table-responsive-sm table-striped">
+                    <colgroup>
+                      <col width="80" />
+                      <col width="*" />
+                      <col width="200" />
+                      <col width="200" />
+                      <col width="200" />
+                      <col width="200" />
+                      <col width="150" />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>아이디</th>
+                      <th>연락처</th>
+                      <th>상품 수</th>
+                      <th>결제 금액</th>
+                      <th>주문일시</th>
+                      <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>fewfqwef</td>
+                      <td>010-0000-0000</td>
+                      <td>5</td>
+                      <td>100,000원</td>
+                      <td>2019-01-01 00:00:00</td>
+                      <td>
+                        <a href="./order-show.html" class="btn btn-secondary btn-sm">확인</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#">Prev</a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- CoreUI and necessary plugins-->
+  <script src="vendors/jquery/js/jquery.min.js"></script>
+  <script src="vendors/popper.js/js/popper.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/pace-progress/js/pace.min.js"></script>
+  <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+  <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+  <!-- Plugins and scripts required by this view-->
+  <script src="vendors/chart.js/js/Chart.min.js"></script>
+  <script src="vendors/@coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js"></script>
+</body>
+</html>
